@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Chave da Aprovação - Seu Guia Definitivo para Concursos Públicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8fafc;
+            color: #2d3748;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="10" cy="90" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .header-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        header h1 {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26,32,44,0.9) 0%, rgba(45,55,72,0.9) 100%), url('sales_page_assets/estudante_focado.png') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.1) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h2 {
+            font-size: 4em;
+            margin-bottom: 25px;
+            font-weight: 800;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            line-height: 1.1;
+        }
+        .hero p {
+            font-size: 1.6em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: #ffffff;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.4em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(238,90,36,0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(238,90,36,0.6);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+        .section-white {
+            background-color: #ffffff;
+        }
+        .section-gray {
+            background-color: #f7fafc;
+        }
+        .section-dark {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: #ffffff;
+        }
+        section h2 {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #2d3748;
+        }
+        .section-dark h2 {
+            color: #ffffff;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #718096;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-dark .section-subtitle {
+            color: #e2e8f0;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .feature-item {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2em;
+            color: white;
+        }
+        .feature-item h3 {
+            color: #2d3748;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .feature-item p {
+            color: #718096;
+            line-height: 1.7;
+        }
+        
+        /* Problem Section */
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .problem-item {
+            background: #ffffff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 5px solid #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        .problem-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .problem-item i {
+            color: #ff6b6b;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+        
+        /* Testimonials */
+        .testimonial {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 30px;
+            font-size: 4em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+        .testimonial .author {
+            font-weight: 600;
+            text-align: right;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="cta-pattern" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23cta-pattern)"/></svg>');
+        }
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        .cta-section h2 {
+            color: #ffffff;
+            font-size: 3.2em;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+        .cta-section p {
+            font-size: 1.4em;
+            margin-bottom: 50px;
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-section .btn-primary {
+            background: #ffffff;
+            color: #ff6b6b;
+            font-size: 1.5em;
+            padding: 25px 50px;
+        }
+        .cta-section .btn-primary:hover {
+            background: #f7fafc;
+            color: #ee5a24;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .hero h2 {
+                font-size: 2.8em;
+            }
+            .hero p {
+                font-size: 1.3em;
+            }
+            .btn-primary {
+                font-size: 1.2em;
+                padding: 18px 35px;
+            }
+            section h2 {
+                font-size: 2.2em;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .feature-item {
+                padding: 30px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-badge">✨ MÉTODO COMPROVADO</div>
+                <h1>A Chave da Aprovação</h1>
+                <p>Seu Guia Definitivo para Concursos Públicos</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Transforme Seu Sonho em Realidade: Conquiste a Aprovação em Concursos Públicos!</h2>
+                <p>Descubra o método comprovado que levou o autor à aprovação em diversos concursos, incluindo o de Policial Rodoviário Federal.</p>
+                <a href="#call-to-action" class="btn-primary">🚀 Quero Ser Aprovado Agora!</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-gray">
+        <div class="container">
+            <h2>Você se identifica com isso?</h2>
+            <p class="section-subtitle">A jornada para a aprovação em concursos públicos pode ser solitária e desafiadora. Muitos candidatos enfrentam os mesmos obstáculos:</p>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Dificuldade em organizar os estudos</strong> e criar um cronograma eficaz que realmente funcione.
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Falta de foco e disciplina</strong> para manter a rotina de preparação consistente.
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Medo de não estar estudando da maneira certa</strong> e perder tempo precioso.
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Ansiedade e estresse pré-prova</strong>, prejudicando o desempenho no dia decisivo.
+                </div>
+                <div class="problem-item">
+                    <i class="fas fa-times-circle"></i>
+                    <strong>Desconhecimento das melhores técnicas</strong> de estudo e revisão eficazes.
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="font-size: 1.3em; font-weight: 600; color: #2d3748;">Se você respondeu sim a alguma dessas perguntas, este e-book foi feito para você!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <h2>A Solução Definitiva para Sua Aprovação</h2>
+            <p class="section-subtitle">Apresentamos o e-book "A Chave da Aprovação", um guia completo e prático desenvolvido por Icaro Nogueira, que transformou sua própria experiência de sucesso em concursos públicos em um método acessível para você.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Mentalidade Vencedora</h3>
+                    <p>Desenvolver a mentalidade e a disciplina necessárias para enfrentar a maratona dos concursos.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Planejamento Estratégico</h3>
+                    <p>Criar um plano de estudos eficaz, com foco nas disciplinas certas e otimização do tempo.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Resolução de Questões</h3>
+                    <p>Dominar a arte de resolver questões, transformando erros em aprendizado e identificando padrões das bancas.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Caderno de Erros Inteligente</h3>
+                    <p>Utilizar o caderno de erros como sua maior ferramenta de revisão e aprimoramento contínuo.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Simulados Realistas</h3>
+                    <p>Preparar-se para o dia da prova com simulados que simulam as condições reais, controlando tempo e emoções.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Foco nas Básicas</h3>
+                    <p>Gabaritar as disciplinas básicas que são o alicerce da sua aprovação e um diferencial competitivo.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Revisão Dinâmica</h3>
+                    <p>Aplicar técnicas de revisão ativa, como flashcards e Anki, para memorizar e reter o conteúdo de forma duradoura.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Preparação Física (TAF)</h3>
+                    <p>Para concursos que exigem TAF, aprenda a conciliar o estudo com o preparo físico, evitando a eliminação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-white">
+        <div class="container">
+            <h2>O Que Você Vai Encontrar no E-book</h2>
+            <p class="section-subtitle">Um conteúdo completo e estruturado para guiar você do zero até a aprovação</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Prefácio Inspirador</h3>
+                    <p>A jornada pessoal do autor, Icaro Nogueira, de um concurso de nível médio a Policial Rodoviário Federal.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Capítulo 1: Mentalidade e Planejamento</h3>
+                    <p>O ponto de partida para a aprovação, com foco no "porquê" e na disciplina.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Capítulo 2: Planejamento de Estudos</h3>
+                    <p>A rota para a aprovação, com a "regra de ouro" de duas disciplinas por dia e a importância da teoria e prática.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Capítulo 3: Resolução de Questões</h3>
+                    <p>O coração da preparação, usando questões como termômetro e bússola, e estratégias para bancas específicas.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Capítulo 4: O Caderno de Erros</h3>
+                    <p>Transformando fraquezas em forças, com dicas para usar o caderno de erros de forma inteligente e ferramentas auxiliares.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Capítulo 5: Simulados</h3>
+                    <p>O ensaio geral para a vitória, com foco em gerenciamento de tempo, resistência e controle emocional.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Capítulo 6: Foco nas Básicas</h3>
+                    <p>O alimento essencial para a aprovação, destacando a importância de Português, RLM e Informática, e a prova discursiva.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h3>Capítulo 7: Revisão</h3>
+                    <p>O combustível da memória, com técnicas de revisão rápida e dinâmica, incluindo Flashcards e Anki.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Capítulo 8: Preparação Física e TAF</h3>
+                    <p>A jornada dupla para concursos com TAF, com dicas para um preparo físico eficaz desde o início.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gray">
+        <div class="container">
+            <h2>Depoimentos de Quem Já Transformou Sua Vida</h2>
+            <p class="section-subtitle">Veja o que nossos leitores estão dizendo sobre "A Chave da Aprovação"</p>
+            <div class="testimonial">
+                <p>Eu estava completamente perdido nos estudos para concursos, sem saber por onde começar. O e-book 'A Chave da Aprovação' me deu o direcionamento que eu precisava. As dicas sobre planejamento e o caderno de erros foram um divisor de águas. Hoje, estou muito mais confiante e focado!</p>
+                <span class="author">- João P., Candidato a Concurso Público</span>
+            </div>
+            <div class="testimonial">
+                <p>Graças ao método do Icaro Nogueira, consegui otimizar meu tempo de estudo e melhorar significativamente meu desempenho nos simulados. A parte sobre resolução de questões e a importância de conhecer a banca foi fundamental para minha aprovação no último concurso!</p>
+                <span class="author">- Maria S., Aprovada em Concurso Estadual</span>
+            </div>
+            <div class="testimonial">
+                <p>O planner da aprovação que vem no final do e-book é simplesmente fantástico! Me ajudou a organizar toda minha rotina de estudos de forma prática e eficiente. Recomendo para todos que querem levar os estudos a sério.</p>
+                <span class="author">- Carlos R., Futuro Servidor Público</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-section" id="call-to-action">
+        <div class="container">
+            <div class="cta-content">
+                <h2>🎯 Não Deixe Sua Aprovação Para Depois!</h2>
+                <p>Adquira agora "A Chave da Aprovação" e comece hoje mesmo a construir sua jornada rumo ao cargo público dos seus sonhos. O sucesso está ao seu alcance!</p>
+                <a href="#" class="btn-primary">🔑 Quero Minha Chave da Aprovação!</a>
+                <div style="margin-top: 30px; font-size: 0.9em; opacity: 0.9;">
+                    <p>✅ Acesso imediato após a compra<br>
+                    ✅ Garantia de 7 dias<br>
+                    ✅ Suporte completo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 A Chave da Aprovação. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
